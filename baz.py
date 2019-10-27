@@ -7,7 +7,6 @@ conn = pymysql.connect('localhost', 'root', 'Julia1234', 'us')
 
 c = conn.cursor()
 
-
 # ## Logowanie
 class DataBaseManager:
     def __init__(self):
