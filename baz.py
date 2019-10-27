@@ -20,8 +20,6 @@ class DataBaseManager:
             return ConnectionRefusedError('bad password')
 
 
-
-
 # wybranie istniejącej bazy
 # cur.execute('use baza_us')
 
@@ -34,11 +32,11 @@ print (c.fetchall())
 
 
 # wypisanie 3 rekordu(tabeli)
-# print (c.fetchall()[2][0])
+#print (c.fetchall()[2][0])
 
 # wyświetlanie nazw pracowników o id=1
 
-c.execute('select * from dane_pracownikow where id_dp=1')
+#c.execute('select * from dane_pracownikow where id_dp=1')
 
 # wprowadzenie danych do bazy
 c.execute("insert into zadania  values (default, 'from script','2020-01-01',1)")
@@ -46,10 +44,10 @@ conn.commit()
 
 
 #aktualizacja danych w bazie
-c.execute('update dane_pracownikow set dzial=referat')
+#c.execute('update dane_pracownikow set dzial=referat')
 
 # zmiana nazwy tabeli
-c.execute('alter table logowanie rename as Logowanie_1')
+#c.execute('alter table logowanie rename as Logowanie_1')
 
 # funkcja usuwająca  użytkownika po id
 
@@ -61,27 +59,25 @@ def deleteUserById(self, id):
          print("błąd danych!")
 
 
-# import modułów pkietu os pozwalającego na operacje na plikach i katalogach
+# import modułów pakietu os pozwalającego na operacje na plikach i katalogach
 
 from os import *
 
 
 # stworzenie i otwarcie do zapisu pliku dane_urzedu.txt w aktualnym katalogu dyskowym
 
-F = open ("dane_urzedu.txt", "w+")
+#F = open ("dane_urzedu.txt", "w+")
 
 # import biblioteki pandas, import danych z zewnętrznych źródeł- csv
 
 import pandas as pd
 
-df = pd.read_csv('~/Downloads/baza_pracownikow.csv')
+df = pd.read_csv('~/Downloads/movie_metadata.csv')
 
-print(df)
+#print(df)
 
 
 # import biblioteki matplotlib- moduł pyplot i biblioteka numpy- genrowanie wykresu
-
-import pylab
 
 import pylab
 x = [1,2,]
